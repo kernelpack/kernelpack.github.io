@@ -10,7 +10,19 @@ sudo su
 nvim /etc/pacman.conf 
 ```
 
-## add this line to end of pacman.conf file
+## add this line at the end of pacman.conf file
+```
+[yuros_kernel]
+SigLevel = Optional TrustAll
+Server = https://kernelpack.yuros.org/$arch
 ```
 
+## update database
+```
+pacman -Syy
+```
+
+## install kernel
+```
+pacman -S linux-karim
 ```
